@@ -31,18 +31,13 @@
             key-positions = <0 1 2 3>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <8 9 7 6>;
-        };
-
         eq {
-            bindings = <&kp MINUS>;
+            bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
         };
 
         hankakuzenkaku {
-            bindings = <&kp LANG5>;
+            bindings = <&kp GRAVE>;
             key-positions = <0 1>;
         };
     };
@@ -83,10 +78,10 @@
 
         FUNCTION {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp AMPERSAND      &kp SQT            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN
-&kp NUMBER_1     &kp NUMBER_2       &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5   &trans    &trans            &kp NUMBER_6       &kp N7             &kp N8                &kp N9                 &kp N0
-&kp RC(Z)        &kp LC(X)          &kp LC(C)     &kp LC(V)     &kp LC(LG(V))  &trans    &trans            &kp LEFT_BRACKET   &kp RIGHT_BRACKET  &kp LESS_THAN         &kp GREATER_THAN       &kp UNDERSCORE
-&kp LG(LC(F4))   &kp LC(LG(D))      &kp LG(TAB)   &trans        &trans         &trans    &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))                                                                  &trans
+&kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET          &kp AMPERSAND  &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET
+&kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5   &trans    &trans            &kp NUMBER_6       &kp N7         &kp N8         &kp N9                &kp N0
+&kp RC(Z)        &kp LC(X)      &kp LC(C)     &kp LC(V)     &kp LC(LG(V))  &trans    &trans            &kp RIGHT_BRACKET  &kp BACKSLASH  &kp LESS_THAN  &kp GREATER_THAN      &kp BACKSLASH
+&kp LG(LC(F4))   &kp LC(LG(D))  &kp LG(TAB)   &trans        &trans         &trans    &kp LG(LC(LEFT))  &kp LG(LC(RIGHT))                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -94,19 +89,19 @@
 
         NUM {
             bindings = <
-&kp F1                      &kp F2           &kp F3           &kp F4           &kp F5                                                   &trans            &trans             &kp UP_ARROW    &trans           &trans
-&kp F6                      &kp F7           &kp F8           &kp F9           &kp F10     &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE    &trans            &kp LEFT           &kp DOWN        &kp RIGHT        &kp RCTRL
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp LG(DOWN)               &kp LG(UP_ARROW)  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp BACKSLASH
-&kp LG(D)                   &kp LG(HOME)     &trans           &trans           &trans      &trans                     &kp LG(LEFT)      &kp LG(RIGHT)                                                         &kp PIPE
+&kp F1                      &kp F2           &kp F3           &kp F4           &kp F5                                                   &trans         &trans    &kp UP_ARROW  &trans     &trans
+&kp F6                      &kp F7           &kp F8           &kp F9           &kp F10     &kp LC(LA(KP_NUMBER_0))    &kp UNDERSCORE    &trans         &kp LEFT  &kp DOWN      &kp RIGHT  &trans
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp LG(DOWN)               &kp LG(UP_ARROW)  &trans         &trans    &trans        &trans     &trans
+&kp LG(D)                   &kp LG(HOME)     &trans           &trans           &trans      &trans                     &kp LG(LEFT)      &kp LG(RIGHT)                                     &trans
             >;
         };
 
         ARROW {
             bindings = <
-&trans               &trans         &trans  &trans  &trans                                                     &trans             &kp LEFT_BRACE  &kp PIPE  &kp RIGHT_BRACE  &trans
-&trans               &trans         &trans  &trans  &kp LA(LC(DELETE))  &trans               &trans            &trans             &mkp MB1        &mkp MB2  &trans           &trans
-&trans               &kp LG(LS(S))  &trans  &trans  &kp LC(LS(ESCAPE))  &kp LG(PAGE_DOWN)    &kp LG(PAGE_UP)   &trans             &trans          &trans    &trans           &trans
-&kp LS(LG(AT_SIGN))  &trans         &trans  &trans  &trans              &trans               &kp LS(LG(LEFT))  &kp LG(LS(RIGHT))                                             &trans
+&trans               &trans         &trans  &trans  &trans                                                     &trans             &kp RIGHT_BRACE  &kp PIPE  &kp PIPE  &trans
+&trans               &trans         &trans  &trans  &kp LA(LC(DELETE))  &trans               &trans            &trans             &mkp MB1         &mkp MB2  &trans    &trans
+&trans               &kp LG(LS(S))  &trans  &trans  &kp LC(LS(ESCAPE))  &kp LG(PAGE_DOWN)    &kp LG(PAGE_UP)   &trans             &trans           &trans    &trans    &trans
+&kp LS(LG(AT_SIGN))  &trans         &trans  &trans  &trans              &trans               &kp LS(LG(LEFT))  &kp LG(LS(RIGHT))                                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
