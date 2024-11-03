@@ -31,14 +31,19 @@
             key-positions = <0 1 2 3>;
         };
 
-        zenhankaku {
-            bindings = <&kp LANG_ZENKAKUHANKAKU>;
-            key-positions = <0 1>;
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9 7 6>;
         };
 
-        kakudai {
-            bindings = <&lt 5 LCTRL>;
-            key-positions = <34 39>;
+        eq {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
+        };
+
+        hankakuzenkaku {
+            bindings = <&kp LANG5>;
+            key-positions = <0 1>;
         };
     };
 
@@ -109,19 +114,19 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &mkp MB1  &mkp MB2  &trans  &lt 5 K_SCROLL_UP
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans    &trans  &mkp MB3
-&trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp MB5                              &trans
+&trans       &trans  &trans  &trans  &trans                      &trans    &trans    &trans    &trans  &trans
+&trans       &trans  &trans  &trans  &trans  &trans    &trans    &trans    &mkp MB1  &mkp MB2  &trans  &lt 5 K_SCROLL_UP
+&trans       &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans    &trans  &mkp MB3
+&lt 5 LCTRL  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp MB5                              &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans     &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
         };
 
