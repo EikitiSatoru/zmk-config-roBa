@@ -60,6 +60,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "NEW_BEHAVIOR";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp K_SCROLL_UP>, <&kp K_SCROLL_DOWN>;
+
+            tap-ms = <5>;
+        };
     };
 
     keymap {
@@ -73,7 +82,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LANGUAGE_2  &lt 2 SPACE  &lt_to_layer_0 3 LANG1    &lt 1 LEFT    &lt 2 RIGHT                             &kp RCTRL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&new_behavior>;
         };
 
         FUNCTION {
