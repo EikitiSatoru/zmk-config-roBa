@@ -61,9 +61,9 @@
             tapping-term-ms = <200>;
         };
 
-        new_behavior: new_behavior {
+        mousescroll: mousescroll {
             compatible = "zmk,behavior-sensor-rotate";
-            label = "NEW_BEHAVIOR";
+            label = "MOUSESCROLL";
             #sensor-binding-cells = <0>;
             bindings = <&kp K_SCROLL_UP>, <&kp K_SCROLL_DOWN>;
 
@@ -82,7 +82,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 LANGUAGE_2  &lt 2 SPACE  &lt_to_layer_0 3 LANG1    &lt 1 LEFT    &lt 2 RIGHT                             &kp RCTRL
             >;
 
-            sensor-bindings = <&new_behavior>;
+            sensor-bindings = <&mousescroll>;
         };
 
         FUNCTION {
@@ -103,6 +103,8 @@
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD  &kp LG(DOWN)               &kp LG(UP_ARROW)  &trans         &trans    &trans        &trans     &trans
 &kp LG(D)                   &kp LG(HOME)     &trans           &trans           &trans      &trans                     &kp LG(LEFT)      &kp LG(RIGHT)                                     &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         ARROW {
