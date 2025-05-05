@@ -49,13 +49,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&lt 5 SEMICOLON &kp>;
-            label = "NEW_MACRO";
-        };
     };
 
     behaviors {
